@@ -1,16 +1,91 @@
-# React + Vite
+# LaunchCode React Practice: Using State in Forms
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This is starter code for practicing React state management and controlled form inputs. You'll build a dynamic feedback form that demonstrates real-time state updates and form validation.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Learning Objectives
 
-## React Compiler
+- Practice using `useState` with object state
+- Implement controlled form inputs
+- Handle form events with `onChange`
+- Display real-time form data preview
+- Implement form validation and conditional rendering
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Getting Started
 
-## Expanding the ESLint configuration
+### 1. Install Dependencies
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+```
+
+### 2. Start Development Server
+
+```bash
+npm run dev
+```
+
+Open your browser to `http://localhost:5173`
+
+## Your Tasks
+
+### Part 1: Complete the Form Logic
+
+The `FeedbackForm.jsx` component has been started for you. Complete the following:
+
+1. **Implement `handleChange` function**
+   - Use the spread operator to update `formData` state
+   - Use `event.target.name` and `event.target.value`
+
+2. **Calculate remaining characters**
+   - Implement character counter for feedback textarea (200 character limit)
+
+3. **Form validation**
+   - Fix the `isFormComplete` logic to check if all fields have values
+
+4. **Add form submission**
+   - Add `onSubmit` event to the form element
+   - Call `handleSubmit` function
+
+### Part 2: Real-time Preview
+
+Update the preview section to display:
+
+- User's name
+- User's email  
+- User's feedback text
+
+### Part 3: Styling (Optional)
+
+The basic layout is provided, but feel free to enhance:
+
+- Form styling and spacing
+- Preview panel appearance
+- Responsive design improvements
+
+## Key Concepts to Practice
+
+- **Controlled Components**: Form inputs controlled by React state
+- **Event Handling**: Using `onChange` and `onSubmit`
+- **Conditional Rendering**: Disable/enable submit button
+- **Object State Management**: Single state object for multiple form fields
+
+## Success Criteria
+
+Your completed form should:
+
+- ✅ Update state as user types in any field
+- ✅ Show real-time preview of form data
+- ✅ Display character count for feedback field
+- ✅ Disable submit button when fields are empty
+- ✅ Handle form submission (console log for now)
+
+## Tips
+
+- Remember to use the `name` attribute on inputs to match your state keys
+- Use bracket notation when accessing dynamic object properties
+- The spread operator (`...`) is your friend for updating object state
+- Check the browser console for any errors
+
+Happy coding! 🚀
