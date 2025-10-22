@@ -3,6 +3,7 @@
 ## Overview
 
 This is starter code for practicing React state management and controlled form inputs. You'll build a dynamic feedback form that demonstrates real-time state updates and form validation.
+Official assignment is available at `https://launchcode.instructure.com/courses/234/assignments/20269?module_item_id=14531`
 
 ## Learning Objectives
 
